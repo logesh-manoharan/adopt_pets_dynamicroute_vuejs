@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <b-navbar>
+        <b-navbar-brand>
+          <h2>Adopt Pets</h2>
+        </b-navbar-brand>
+        <b-nav-item>
+              <router-link class="router_link" to="/">Home</router-link>
+          </b-nav-item>
+          <b-nav-item>
+              <router-link class="router_link" to="/cats">Cats</router-link>
+          </b-nav-item>
+          <b-nav-item>
+              <router-link class="router_link" to="/dogs">Dogs</router-link>
+          </b-nav-item>
+          <b-nav-item>
+              <router-link class="router_link" to="/pets">Pets</router-link>
+          </b-nav-item>
+    </b-navbar>
+          
+    <b-container>
+      <router-view></router-view>
+    </b-container>
+      
+
+      
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -23,6 +44,25 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 6
+  0px;
+}
+
+.navbar {
+  background: #f6b319;
+}
+
+.nav-item {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.router_link {
+  color: green;
+}
+
+.router-link-active {
+  background: lightgreen
 }
 </style>
